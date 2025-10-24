@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://esmail.ct.ws/sitemap.xml
