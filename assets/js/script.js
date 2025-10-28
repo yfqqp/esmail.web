@@ -811,104 +811,88 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 function addWatermarkToImage(img) {
-    return new Promise((resolve) => {
-        if (img.id === 'profilePic' || img.src.includes('data:')) {
-            resolve();
-            return;
+    if (img.id === 'profilePic' || img.src.includes('data:')) return;
+    
+    const originalSrc = img.src;
+    const tempImg = new Image();
+    
+    tempImg.crossOrigin = "anonymous";
+    tempImg.onload = function() {
+        const canvas = document.createElement('canvas');
+        canvas.width = this.naturalWidth || this.width;
+        canvas.height = this.naturalHeight || this.height;
+        const ctx = canvas.getContext('2d');
+        
+        ctx.drawImage(this, 0, 0, canvas.width, canvas.height);
+        
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
+        ctx.font = 'bold 16px Arial';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        
+        const text = currentLanguage === 'ar' ? 'إسماعيل المخلافي' : 
+                     currentLanguage === 'ru' ? 'Эсмаил Альмехлафи' : 
+                     'Esmail Almekhlafi';
+
+        const cols = Math.ceil(canvas.width / 200);
+        const rows = Math.ceil(canvas.height / 120);
+        
+        for (let i = 0; i < cols; i++) {
+            for (let j = 0; j < rows; j++) {
+                const x = (i * 200) + 100;
+                const y = (j * 120) + 60;
+                
+                ctx.save();
+                ctx.translate(x, y);
+                ctx.rotate(-0.4);
+                ctx.fillText(text, 0, 0);
+                ctx.restore();
+            }
         }
         
-        const originalSrc = img.src;
-        const tempImg = new Image();
-        
-        tempImg.onload = function() {
-            const canvas = document.createElement('canvas');
-            canvas.width = this.width;
-            canvas.height = this.height;
-            const ctx = canvas.getContext('2d');
-            
-            ctx.drawImage(this, 0, 0);
-            
-            ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
-            ctx.font = '14px Arial';
-            ctx.textAlign = 'center';
-            
-            const text = currentLanguage === 'ar' ? 'إسماعيل المخلافي' : 
-                         currentLanguage === 'ru' ? 'Эсмаил Альмехлафи' : 
-                         'Esmail Almekhlafi';
-
-            for (let x = 100; x < canvas.width; x += 200) {
-                for (let y = 80; y < canvas.height; y += 120) {
-                    ctx.save();
-                    ctx.translate(x, y);
-                    ctx.rotate(-0.4);
-                    ctx.fillText(text, 0, 0);
-                    ctx.restore();
-                }
-            }
-            
-            img.src = canvas.toDataURL();
-            img.setAttribute('data-watermarked', 'true');
-            resolve();
-        };
-        
-        tempImg.src = originalSrc;
-    });
-}
-
-async function initWatermarks() {
-    const images = Array.from(document.querySelectorAll('img')).filter(img => 
-        img.id !== 'profilePic' && img.src && !img.src.includes('data:')
-    );
+        img.src = canvas.toDataURL('image/jpeg', 0.9);
+    };
     
-    for (let i = 0; i < images.length; i += 3) {
-        const batch = images.slice(i, i + 3);
-        await Promise.all(batch.map(img => addWatermarkToImage(img)));
-    }
+    tempImg.onerror = function() {
+        console.log('Failed to load image for watermarking:', originalSrc);
+    };
+    
+    tempImg.src = originalSrc;
 }
 
-function reapplyWatermarksToAllImages() {
-    document.querySelectorAll('img').forEach(img => {
-        if (img.id !== 'profilePic' && img.src) {
-            const originalSrc = img.getAttribute('data-original-src') || img.src;
-            img.setAttribute('data-original-src', originalSrc);
-            img.src = originalSrc;
-            
-            setTimeout(() => {
-                addWatermarkToImage(img);
-            }, 100);
+function initWatermarks() {
+    const images = document.querySelectorAll('img');
+    
+    images.forEach(img => {
+        if (img.id === 'profilePic') return;
+        
+        if (img.complete) {
+            addWatermarkToImage(img);
+        } else {
+            img.addEventListener('load', function() {
+                addWatermarkToImage(this);
+            });
         }
     });
 }
-
-function observeModalImages() {
-    const observer = new MutationObserver(() => {
-        document.querySelectorAll('#detailModal.active img, #galleryModal.active img').forEach(img => {
-            if (!img.src.includes('data:')) {
-                img.setAttribute('data-original-src', img.src);
-                addWatermarkToImage(img);
-            }
-        });
-    });
-    
-    observer.observe(document.body, { childList: true, subtree: true });
-}
-
-const originalChangeLanguage = changeLanguage;
-changeLanguage = function(lang) {
-    originalChangeLanguage(lang);
-    setTimeout(reapplyWatermarksToAllImages, 100);
-};
 
 document.addEventListener('DOMContentLoaded', function() {
     emailjs.init("t_Q0ZFCO4oKsLGLJu");
-    
-    setTimeout(() => {
-        initWatermarks();
-        observeModalImages();
-    }, 100);
+    setTimeout(initWatermarks, 1000);
 });
+function addWatermarkToModalImages() {
+    const modalImages = document.querySelectorAll('#detailModal img, #galleryModal img');
+    modalImages.forEach(img => {
+        if (img.id !== 'profilePic' && !img.src.includes('data:')) {
+            addWatermarkToImage(img);
+        }
+    });
+}
 
-
-
-
+document.addEventListener('DOMContentLoaded', function() {
+    emailjs.init("t_Q0ZFCO4oKsLGLJu");
+    setTimeout(initWatermarks, 1000);
+    
+    setInterval(addWatermarkToModalImages, 1000);
+});
 
