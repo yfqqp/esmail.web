@@ -811,101 +811,56 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 function addWatermarkToImage(img) {
-    return new Promise((resolve) => {
-        if (img.id === 'profilePic' || img.src.includes('data:')) {
-            resolve();
-            return;
-        }
-        
-        const originalSrc = img.src;
-        const tempImg = new Image();
-        
-        tempImg.onload = function() {
-            const canvas = document.createElement('canvas');
-            canvas.width = this.width;
-            canvas.height = this.height;
-            const ctx = canvas.getContext('2d');
-            
-            ctx.drawImage(this, 0, 0);
-            
-            ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
-            ctx.font = '14px Arial';
-            ctx.textAlign = 'center';
-            
-            const text = currentLanguage === 'ar' ? 'إسماعيل المخلافي' : 
-                         currentLanguage === 'ru' ? 'Эсмаил Альмехлафи' : 
-                         'Esmail Almekhlafi';
-
-            for (let x = 100; x < canvas.width; x += 200) {
-                for (let y = 80; y < canvas.height; y += 120) {
-                    ctx.save();
-                    ctx.translate(x, y);
-                    ctx.rotate(-0.4);
-                    ctx.fillText(text, 0, 0);
-                    ctx.restore();
-                }
-            }
-            
-            img.src = canvas.toDataURL();
-            img.setAttribute('data-watermarked', 'true');
-            resolve();
-        };
-        
-        tempImg.src = originalSrc;
-    });
-}
-
-async function initWatermarks() {
-    const images = Array.from(document.querySelectorAll('img')).filter(img => 
-        img.id !== 'profilePic' && img.src && !img.src.includes('data:')
-    );
+    if (img.id === 'profilePic' || img.src.includes('data:')) return;
     
-    for (let i = 0; i < images.length; i += 3) {
-        const batch = images.slice(i, i + 3);
-        await Promise.all(batch.map(img => addWatermarkToImage(img)));
+    const canvas = document.createElement('canvas');
+    canvas.width = img.naturalWidth || img.width;
+    canvas.height = img.naturalHeight || img.height;
+    const ctx = canvas.getContext('2d');
+    
+    ctx.drawImage(img, 0, 0);
+    
+    ctx.fillStyle = 'rgba(255,255,255,0.3)';
+    ctx.font = '14px Arial';
+    ctx.textAlign = 'center';
+    
+    const text = currentLanguage === 'ar' ? 'إسماعيل المخلافي' : 
+                 currentLanguage === 'ru' ? 'Эсмаил Альмехлафи' : 
+                 'Esmail Almekhlafi';
+
+    for (let x = 150; x < canvas.width; x += 250) {
+        for (let y = 100; y < canvas.height; y += 150) {
+            ctx.save();
+            ctx.translate(x, y);
+            ctx.rotate(-0.4);
+            ctx.fillText(text, 0, 0);
+            ctx.restore();
+        }
     }
+    
+    img.src = canvas.toDataURL('image/jpeg', 0.8);
 }
 
-function reapplyWatermarksToAllImages() {
-    document.querySelectorAll('img').forEach(img => {
-        if (img.id !== 'profilePic' && img.src) {
-            const originalSrc = img.getAttribute('data-original-src') || img.src;
-            img.setAttribute('data-original-src', originalSrc);
-            img.src = originalSrc;
-            
-            setTimeout(() => {
-                addWatermarkToImage(img);
-            }, 100);
-        }
-    });
-}
-
-function observeModalImages() {
-    const observer = new MutationObserver(() => {
-        document.querySelectorAll('#detailModal.active img, #galleryModal.active img').forEach(img => {
-            if (!img.src.includes('data:')) {
-                img.setAttribute('data-original-src', img.src);
+function initWatermarks() {
+    const images = document.querySelectorAll('img:not(#profilePic)');
+    
+    let index = 0;
+    function processNext() {
+        if (index < images.length) {
+            const img = images[index];
+            if (img.complete && !img.src.includes('data:')) {
                 addWatermarkToImage(img);
             }
-        });
-    });
-    
-    observer.observe(document.body, { childList: true, subtree: true });
+            index++;
+            setTimeout(processNext, 50);
+        }
+    }
+    processNext();
 }
-
-const originalChangeLanguage = changeLanguage;
-changeLanguage = function(lang) {
-    originalChangeLanguage(lang);
-    setTimeout(reapplyWatermarksToAllImages, 100);
-};
 
 document.addEventListener('DOMContentLoaded', function() {
     emailjs.init("t_Q0ZFCO4oKsLGLJu");
-    
-    setTimeout(() => {
-        initWatermarks();
-        observeModalImages();
-    }, 100);
+    setTimeout(initWatermarks, 500);
 });
 
 
