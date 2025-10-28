@@ -3,21 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Esmail Almekhlafi - Portfolio</title>
-     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LY2W9WPMW0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-LY2W9WPMW0');
-</script>
+    <title>Esmail Almekhlafi - Portfolio | Robotics & AI Engineer</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LY2W9WPMW0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-LY2W9WPMW0');
+    </script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="alternate icon" type="image/png" href="favicon.png" sizes="32x32">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta name="description" content="اسماعيل صفوان المخلافي - Esmail Safwan Almekhlafi | باحث في العلوم والتكنولوجيا | مهندس طموح | متخصص في الروبوتات والذكاء الاصطناعي">
-<meta name="keywords" content="اسماعيل صفوان, اسماعيل المخلافي, Esmail Almekhlafi, Esmail Safwan, اسماعيل صفوان المخلافي, Esmail Safwan Almekhlafi, robotics, AI, Yemen, aden">
-<meta name="author" content="Esmail Almekhlafi">
+    <link rel="alternate icon" type="image/png" href="favicon.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta name="description" content="اسماعيل صفوان المخلافي - Esmail Safwan Almekhlafi | باحث في العلوم والتكنولوجيا | مهندس طموح | متخصص في الروبوتات والذكاء الاصطناعي">
+    <meta name="keywords" content="اسماعيل صفوان, اسماعيل المخلافي, Esmail Almekhlafi, Esmail Safwan, اسماعيل صفوان المخلافي, Esmail Safwan Almekhlafi, robotics, AI, Yemen, aden">
+    <meta name="author" content="Esmail Almekhlafi">
+    <meta name="theme-color" content="#2563eb">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -48,11 +51,11 @@
 <link rel="alternate" href="https://yfqqp.github.io/esmail.web/" hreflang="x-default" />
 </head>
 <body class="light">
-    <header>
+    <header role="banner">
         <div class="header-container">
             <div class="logo" data-translate="logo">Esmail Almekhlafi</div>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
-            <nav id="mainNav">
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+            <nav id="mainNav" role="navigation" aria-label="Main navigation">
                 <a href="#home" data-translate="home">Home</a>
                 <a href="#cv" data-translate="cv">CV</a>
                 <a href="#achievements" data-translate="achievements">Achievements</a>
@@ -62,21 +65,21 @@
             </nav>
             <div class="header-controls">
                 <div class="language-dropdown">
-                    <button class="language-btn" id="languageBtn">English ▼</button>
-                    <div class="language-menu" id="languageMenu">
-                        <button onclick="changeLanguage('en')">English</button>
-                        <button onclick="changeLanguage('ar')">العربية</button>
-                        <button onclick="changeLanguage('ru')">Русский</button>
+                    <button class="language-btn" id="languageBtn" aria-label="Select language" aria-haspopup="true">English ▼</button>
+                    <div class="language-menu" id="languageMenu" role="menu">
+                        <button onclick="changeLanguage('en')" role="menuitem">English</button>
+                        <button onclick="changeLanguage('ar')" role="menuitem">العربية</button>
+                        <button onclick="changeLanguage('ru')" role="menuitem">Русский</button>
                     </div>
                 </div>
-                <button class="theme-toggle" id="themeToggle">🌙</button>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
             </div>
         </div>
     </header>
 
     <section class="fade-up" id="home">
         <div class="hero-container">
-            <img src="assets/profile.webp" alt="اسماعيل صفوان المخلافي - Esmail Safwan Almekhlafi | اسماعيل صفوان | اسماعيل المخلافي | Esmail Almekhlafi | Esmail Safwan" class="profile-pic" id="profilePic" fetchpriority="high" >
+            <img src="assets/profile.webp" alt="اسماعيل صفوان المخلافي - Esmail Safwan Almekhlafi | اسماعيل صفوان | اسماعيل المخلافي | Esmail Almekhlafi | Esmail Safwan" class="profile-pic" id="profilePic" fetchpriority="high" loading="eager">
             <h1 class="hero-title" data-translate="name">Esmail Almekhlafi</h1>
             <p class="hero-subtitle" data-translate="subtitle">Science & Technology Explorer | Aspiring Engineer</p>
         </div>
@@ -117,7 +120,7 @@
         <button class="gallery-modal-close" id="galleryModalClose">&times;</button>
         <button class="gallery-modal-nav gallery-modal-prev" id="galleryModalPrev">&#10094;</button>
         <button class="gallery-modal-nav gallery-modal-next" id="galleryModalNext">&#10095;</button>
-        <img fetchpriority="auto" id="galleryModalImage" class="gallery-modal-img" src="" alt="">
+        <img loading="lazy" id="galleryModalImage" class="gallery-modal-img" src="" alt="">
         <div class="gallery-modal-caption">
             <h3 id="galleryModalTitle"></h3>
             <p id="galleryModalDesc"></p>
@@ -130,7 +133,7 @@
         <div class="section-navigation">
             <div class="cards-container" id="achievementsContainer">
                 <div class="card" onclick="openModal('achievement', 0)">
-                    <img fetchpriority="auto" src="assets/achievements/cert1.webp" alt="Achievement 1">
+                    <img loading="lazy" src="assets/achievements/cert1.webp" alt="Achievement 1">
                     <div class="card-content">
                         <span class="card-badge">11/2019</span>
                         <h3 data-translate="achievement1_title">The School Competition for Robotics and Artificial Intelligence</h3>
@@ -142,7 +145,7 @@
                     </div>
                 </div>
                 <div class="card" onclick="openModal('achievement', 1)">
-                    <img fetchpriority="auto" src="assets/achievements/cert2.webp" alt="Achievement 2">
+                    <img loading="lazy" src="assets/achievements/cert2.webp" alt="Achievement 2">
                     <div class="card-content">
                         <span class="card-badge">3/2020</span>
                         <h3 data-translate="achievement2_title">The Local Robotics Competition at the Level of Aden Governorate</h3>
@@ -154,7 +157,7 @@
                     </div>
                 </div>
                 <div class="card" onclick="openModal('achievement', 2)">
-                    <img fetchpriority="auto" src="assets/achievements/cert3.webp" alt="Achievement 3">
+                    <img loading="lazy" src="assets/achievements/cert3.webp" alt="Achievement 3">
                     <div class="card-content">
                         <span class="card-badge">12/2020</span>
                         <h3 data-translate="achievement3_title">The First National Virtual Competition for Robotics and AI (STEM)</h3>
@@ -166,7 +169,7 @@
                     </div>
                 </div>
                 <div class="card" onclick="openModal('achievement', 3)">
-                    <img fetchpriority="auto" src="assets/achievements/cert4.webp" alt="Achievement 4">
+                    <img loading="lazy" src="assets/achievements/cert4.webp" alt="Achievement 4">
                     <div class="card-content">
                         <span class="card-badge">11/2021</span>
                         <h3 data-translate="achievement4_title">Third National Robotics and Artificial Intelligence Championship (Valuable Participation)</h3>
@@ -178,7 +181,7 @@
                     </div>
                 </div>
                 <div class="card" onclick="openModal('achievement', 4)">
-                    <img fetchpriority="auto" src="assets/achievements/cert5.webp" alt="Achievement 5">
+                    <img loading="lazy" src="assets/achievements/cert5.webp" alt="Achievement 5">
                     <div class="card-content">
                         <span class="card-badge">2022/2023</span>
                         <h3 data-translate="achievement5_title">Academic Excellence Certificate</h3>
@@ -190,7 +193,7 @@
                     </div>
                 </div>
                 <div class="card" onclick="openModal('achievement', 5)">
-                    <img fetchpriority="auto" src="assets/achievements/cert6.webp" alt="Achievement 6">
+                    <img loading="lazy" src="assets/achievements/cert6.webp" alt="Achievement 6">
                     <div class="card-content">
                         <span class="card-badge">2022/2023</span>
                         <h3 data-translate="achievement6_title">Certificate of Appreciation</h3>
@@ -202,7 +205,7 @@
                     </div>
                 </div>
                 <div class="card" onclick="openModal('achievement', 6)">
-                    <img fetchpriority="auto" src="assets/achievements/cert7.webp" alt="Achievement 7">
+                    <img loading="lazy" src="assets/achievements/cert7.webp" alt="Achievement 7">
                     <div class="card-content">
                         <span class="card-badge">2022/2023</span>
                         <h3 data-translate="achievement7_title">Discipline Certificate</h3>
@@ -214,7 +217,7 @@
                     </div>
                 </div>
                 <div class="card" onclick="openModal('achievement', 7)">
-                    <img fetchpriority="auto" src="assets/achievements/cert8.webp" alt="Achievement 8">
+                    <img loading="lazy" src="assets/achievements/cert8.webp" alt="Achievement 8">
                     <div class="card-content">
                         <span class="card-badge">2023/2024</span>
                         <h3 data-translate="achievement8_title">Certificate of Appreciation</h3>
@@ -226,7 +229,7 @@
                     </div>
                 </div>
                 <div class="card" onclick="openModal('achievement', 8)">
-                    <img fetchpriority="auto" src="assets/achievements/cert9.webp" alt="Achievement 9">
+                    <img loading="lazy" src="assets/achievements/cert9.webp" alt="Achievement 9">
                     <div class="card-content">
                         <span class="card-badge">2023/2024</span>
                         <h3 data-translate="achievement9_title">Academic Excellence Certificate</h3>
@@ -238,7 +241,7 @@
                     </div>
                 </div>
                 <div class="card" onclick="openModal('achievement', 9)">
-                    <img fetchpriority="auto" src="assets/achievements/cert10.webp" alt="Achievement 10">
+                    <img loading="lazy" src="assets/achievements/cert10.webp" alt="Achievement 10">
                     <div class="card-content">
                         <span class="card-badge">2023/2024</span>
                         <h3 data-translate="achievement10_title">Discipline Certificate</h3>
@@ -250,7 +253,7 @@
                     </div>
                 </div>
                 <div class="card" onclick="openModal('achievement', 10)">
-                    <img fetchpriority="auto" src="assets/achievements/cert11.webp" alt="Achievement 11">
+                    <img loading="lazy" src="assets/achievements/cert11.webp" alt="Achievement 11">
                     <div class="card-content">
                         <span class="card-badge">2024/2025</span>
                         <h3 data-translate="achievement11_title">Academic Excellence Certificate</h3>
@@ -273,7 +276,7 @@
         <h2 class="section-title" data-translate="courses">Courses</h2>
         <div class="cards-container">
             <div class="card" onclick="openModal('course', 0)">
-                <img fetchpriority="auto" src="assets/courses/course1.webp" alt="Course 1">
+                <img loading="lazy" src="assets/courses/course1.webp" alt="Course 1">
                 <div class="card-content">
                     <span class="card-badge">28/9/2025</span>
                     <h3 data-translate="course1_title">Artificial Intelligence Foundations: Thinking Machines</h3>
@@ -285,7 +288,7 @@
                 </div>
             </div>
             <div class="card" onclick="openModal('course', 1)">
-                <img fetchpriority="auto" src="assets/courses/course2.webp" alt="Course 2">
+                <img loading="lazy" src="assets/courses/course2.webp" alt="Course 2">
                 <div class="card-content">
                     <span class="card-badge">1/10/2025</span>
                     <h3 data-translate="course2_title">Electronics Foundations: Semiconductor Devices</h3>
@@ -297,7 +300,7 @@
                 </div>
             </div>
             <div class="card" onclick="openModal('course', 2)">
-                <img fetchpriority="auto" src="assets/courses/course3.webp" alt="Course 3">
+                <img loading="lazy" src="assets/courses/course3.webp" alt="Course 3">
                 <div class="card-content">
                     <span class="card-badge">12/10/2025</span>
                     <h3 data-translate="course3_title">Career Essentials in Data Analysis</h3>
@@ -309,7 +312,7 @@
                 </div>
             </div>
             <div class="card" onclick="openModal('course', 3)">
-                <img fetchpriority="auto" src="assets/courses/course4.webp" alt="Course 4">
+                <img loading="lazy" src="assets/courses/course4.webp" alt="Course 4">
                 <div class="card-content">
                     <span class="card-badge">17/10/2025</span>
                     <h3 data-translate="course4_title">Programming Foundations: Beyond the Fundamentals</h3>
@@ -321,7 +324,7 @@
                 </div>
             </div>
             <div class="card" onclick="openModal('course', 4)">
-                <img fetchpriority="auto" src="assets/courses/course5.webp" alt="Course 3">
+                <img loading="lazy" src="assets/courses/course5.webp" alt="Course 3">
                 <div class="card-content">
                     <span class="card-badge">21/10/2025</span>
                     <h3 data-translate="course5_title">Programming Foundations: Algorithms</h3>
@@ -394,25 +397,25 @@
 
 
 
-    <footer id="contact">
+    <footer id="contact" role="contentinfo">
         <div class="footer-links">
-            <a href="https://www.linkedin.com/in/esmail-safwan-6aba8b343?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a>
-            <a href="mailto:esmailll.safwan@gmail.com">Email</a>
+            <a href="https://www.linkedin.com/in/esmail-safwan-6aba8b343?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">LinkedIn</a>
+            <a href="mailto:esmailll.safwan@gmail.com" aria-label="Send email">Email</a>
         </div>
         <p data-translate="copyright">© 2025 Ismail</p>
     </footer>
 
-    <div id="profileModal" class="modal">
+    <div id="profileModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="profileModalTitle">
         <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('profileModal')">&times;</button>
-            <img fetchpriority="auto" src="assets/profile.webp" alt="اسماعيل صفوان المخلافي - Esmail Safwan Almekhlafi | اسماعيل صفوان | اسماعيل المخلافي | Esmail Almekhlafi | Esmail Safwan" class="modal-img">
+            <button class="modal-close" onclick="closeModal('profileModal')" aria-label="Close modal">&times;</button>
+            <img loading="lazy" src="assets/profile.webp" alt="اسماعيل صفوان المخلافي - Esmail Safwan Almekhlafi | اسماعيل صفوان | اسماعيل المخلافي | Esmail Almekhlafi | Esmail Safwan" class="modal-img">
         </div>
     </div>
 
-    <div id="detailModal" class="modal">
+    <div id="detailModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
         <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('detailModal')">&times;</button>
-            <img fetchpriority="auto" id="modalImage" src="" alt="" class="modal-img">
+            <button class="modal-close" onclick="closeModal('detailModal')" aria-label="Close modal">&times;</button>
+            <img loading="lazy" id="modalImage" src="" alt="" class="modal-img">
             <h2 id="modalTitle"></h2>
             <div class="modal-info">
                 <span class="modal-badge" id="modalYear"></span>
@@ -423,7 +426,14 @@
         </div>
     </div>
     
+    <link rel="preload" href="assets/css/style.css" as="style">
+    <link rel="preload" href="assets/profile.webp" as="image">
     <script defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script defer src="assets/js/script.js"></script>
+    <noscript>
+        <style>
+            .fade-up { opacity: 1 !important; transform: none !important; }
+        </style>
+    </noscript>
 </body>
 </html>

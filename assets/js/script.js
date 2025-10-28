@@ -761,7 +761,15 @@ document.addEventListener('DOMContentLoaded', function() {
         const mainNav = document.getElementById('mainNav');
         if (mobileMenuBtn && mainNav) {
             mobileMenuBtn.addEventListener('click', function() {
-                mainNav.classList.toggle('active');
+                const isExpanded = mainNav.classList.toggle('active');
+                mobileMenuBtn.setAttribute('aria-expanded', isExpanded);
+            });
+
+            document.querySelectorAll('#mainNav a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mainNav.classList.remove('active');
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                });
             });
         }
 
@@ -776,6 +784,14 @@ document.addEventListener('DOMContentLoaded', function() {
             modal.addEventListener('click', function(event) {
                 if (event.target === modal) {
                     modal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
+            modal.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
                 }
             });
         });
