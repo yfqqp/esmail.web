@@ -1,21 +1,224 @@
-MIT License
+Selective Licensing Agreement
 
-Copyright (c) 2025 Esmail
+Chapter 1: General Provisions
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Article 1: Definitions
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Project: Includes the website (https://yfqqp.github.io/esmail.web/) and all its components
+Source Code: Includes HTML, CSS, JavaScript, and used libraries
+Personal Content: Includes images, texts, CV, personal experiences
+Private Data: Personal information, contact details, experiences, personal projects
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Article 2: License Scope
+
+```
+This agreement governs the use of "Esmail Web" project and precisely defines
+what can be shared and what must be protected, balancing between
+knowledge sharing and privacy protection.
+```
+
+---
+
+Chapter 2: Technical Licensing Details
+
+Article 3: Shareable Code
+
+3.1 Allowed File Types:
+
+```
+- HTML files (page structure only)
+- CSS files (design and styling)
+- JavaScript files (functions and applications)
+- Configuration files
+- Technical documentation files
+```
+
+3.2 Code Usage Conditions:
+
+· Usage: Allowed for personal, educational, commercial use
+· Modification: Allowed to modify and improve code
+· Distribution: Allowed to distribute original or modified code
+· Requirement: Must credit original source in README file
+
+3.3 Allowed Practical Examples:
+
+```javascript
+// ✓ Allowed: Using JavaScript functions
+function navigateToSection(sectionId) {
+    // This code can be used
+}
+
+// ✓ Allowed: Cloning CSS styles
+.header-style {
+    color: #333;
+    font-size: 1.2rem;
+}
+```
+
+Article 4: Protected Personal Content
+
+4.1 Protected Images:
+
+```
+- Personal portraits
+- Family photos
+- Personal screenshots
+- Memorial photos
+- Any image containing personal features
+```
+
+4.2 Protected Texts:
+
+```
+- Curriculum Vitae (CV)
+- Personal work experiences
+- Completed personal projects
+- Personal biography (Bio)
+- Certificates and recommendations
+- Any text describing personal experience
+```
+
+4.3 Protected Data:
+
+```
+- Contact information
+- Personal career history
+- Acquired skills and experiences
+- Personal achievements
+- Any identifying data
+```
+
+---
+
+Chapter 3: Detailed Provisions
+
+Article 5: Detailed Permitted Uses
+
+5.1 For Developers:
+
+```
+✓ Allowed: Studying website structure and design
+✓ Allowed: Using navigation and animation functions
+✓ Allowed: Cloning button styles and formatting
+✓ Allowed: Developing similar code with modifications
+✓ Allowed: Using in educational projects
+```
+
+5.2 For Companies:
+
+```
+✓ Allowed: Using code in internal projects
+✓ Allowed: Modifying according to company needs
+✓ Allowed: Integration with commercial projects
+✗ Forbidden: Copying personal content for clients
+```
+
+Article 6: Detailed Prohibited Uses
+
+6.1 Prohibited for Images:
+
+```
+✗ Forbidden: Using images on other websites
+✗ Forbidden: Modifying or cropping images
+✗ Forbidden: Using images in promotional materials
+✗ Forbidden: Publishing images on social media
+```
+
+6.2 Prohibited for Texts:
+
+```
+✗ Forbidden: Copying curriculum vitae
+✗ Forbidden: Using experiences in other CVs
+✗ Forbidden: Translating personal texts and publishing
+✗ Forbidden: Quoting personal experiences
+```
+
+---
+
+Chapter 4: Technical Measures
+
+Article 7: Distinguishing Between Allowed and Prohibited
+
+7.2 In Source Code:
+
+```html
+<!-- ✓ Allowed: HTML structure -->
+<div class="container">
+    <header class="main-header"></header>
+</div>
+
+<!-- ✗ Forbidden: Personal text content -->
+<p>5 years experience in programming field...</p>
+```
+
+Article 8: Technical Protection Tips
+
+8.1 Recommended Protection Settings:
+
+```javascript
+// Add warning in console
+console.log("⚠️ Code is open source - Personal content is protected");
+
+// Protect images with robots.txt
+User-agent: *
+Disallow: /images/personal/
+Disallow: /assets/private/
+```
+
+8.2 Add Protection Metadata:
+
+```html
+<meta name="copyright" content="Code is open source - Personal content is protected">
+<meta name="author" content="Esmail">
+```
+
+---
+
+Chapter 5: Final Provisions
+
+Article 9: Penalties and Consequences
+
+9.1 For Minor Violations:
+
+```
+- Warning to remove content within 7 days
+- Request for public apology
+- Future access restriction to project
+```
+
+9.2 For Major Violations:
+
+```
+- Legal pursuit according to intellectual property laws
+- Compensation for moral and material damages
+- Publishing violation statement in tech community
+```
+
+Article 10: Communication and Exceptions
+
+```
+For exception requests or special licenses:
+- Contact via: [Preferred contact method]
+- Submit written request clarifying purpose
+- Wait for written approval
+
+All requests are studied individually and may be rejected without reasons.
+```
+
+---
+
+Conclusion
+
+```
+This agreement aims to achieve balance between:
+- 💡 Sharing programming knowledge
+- 🛡️ Protecting personal privacy
+- 🌍 Supporting tech community
+- 📝 Respecting individual rights
+
+"Code for learning, privacy for respect"
+```
+
+Contact for legal inquiries:
+Esmail - Project Owner
+https://yfqqp.github.io/esmail.web/
