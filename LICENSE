@@ -150,28 +150,6 @@ Article 7: Distinguishing Between Allowed and Prohibited
 <!-- ✗ Forbidden: Personal text content -->
 <p>5 years experience in programming field...</p>
 ```
-
-Article 8: Technical Protection Tips
-
-8.1 Recommended Protection Settings:
-
-```javascript
-// Add warning in console
-console.log("⚠️ Code is open source - Personal content is protected");
-
-// Protect images with robots.txt
-User-agent: *
-Disallow: /images/personal/
-Disallow: /assets/private/
-```
-
-8.2 Add Protection Metadata:
-
-```html
-<meta name="copyright" content="Code is open source - Personal content is protected">
-<meta name="author" content="Esmail">
-```
-
 ---
 
 Chapter 5: Final Provisions
