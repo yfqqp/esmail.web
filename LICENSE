@@ -1,4 +1,4 @@
-Selective Licensing Agreement – Esmail Web
+🧾 Selective Licensing Agreement – Esmail Web
 
 Version 1.0 — November 2025
 Project Owner: Esmail
@@ -8,7 +8,7 @@ Contact: esmailll.safwan@gmail.com
 
 ---
 
-Chapter 1: General Provisions
+🩷 Chapter 1: General Provisions
 
 Article 1: Definitions
 
@@ -21,6 +21,9 @@ Personal Content: Refers to all personal images, texts, CV, and personal experie
 Private Data: Includes all personal information, contact details, career history, and project data.
 
 
+
+---
+
 Article 2: License Scope
 
 This agreement governs the use of the Esmail Web project.
@@ -29,7 +32,7 @@ It defines what may be freely shared and what must remain protected — balancin
 
 ---
 
-Chapter 2: Technical Licensing Details
+⚙️ Chapter 2: Technical Licensing Details
 
 Article 3: Shareable Code
 
@@ -101,25 +104,36 @@ Career and academic history
 
 Personal achievements and identifying information
 
+
+
 ---
 
-Chapter 3: Detailed Provisions
+📋 Chapter 3: Detailed Provisions
 
 Article 5: Permitted Uses
 
 For Developers
 
 ✓ Studying the website’s structure and UI design
+
 ✓ Reusing navigation or animation functions
+
 ✓ Cloning styles or UI components
+
 ✓ Building similar code with modifications
+
 ✓ Using for educational purposes
+
 
 For Companies
 
 ✓ Using source code in internal or commercial projects
+
 ✓ Modifying or integrating code according to business needs
+
 ✗ Forbidden: Using or copying personal content for clients
+
+
 
 ---
 
@@ -128,18 +142,25 @@ Article 6: Prohibited Uses
 Images
 
 ✗ Using images on other websites
+
 ✗ Editing, cropping, or redistributing images
+
 ✗ Using images for marketing or social media
+
 
 Texts
 
 ✗ Copying CV or personal biography
+
 ✗ Using or quoting personal experiences
+
 ✗ Translating personal texts for republication
+
+
 
 ---
 
-Chapter 4: Technical Measures
+💻 Chapter 4: Technical Measures
 
 Article 7: Code Identification
 
@@ -156,48 +177,51 @@ Developers must distinguish between allowed and restricted elements in the sourc
 
 ---
 
-Chapter 5: Final Provisions
+⚖️ Chapter 5: Final Provisions
 
 Article 9: Violations and Consequences
 
 Minor Violations
 
-Written warning and 7-day notice to remove the infringing content
+Written warning and 7-day notice to remove the infringing content.
 
-Public acknowledgment of correction
+Public acknowledgment of correction.
 
-Future access restrictions to Esmail Web resources
+Future access restrictions to Esmail Web resources.
 
 
 Major Violations
 
-Legal action under intellectual property laws
+Legal action under intellectual property laws.
 
-Compensation for material and moral damages
+Compensation for material and moral damages.
 
-Publication of violation notice within the tech community
+Publication of violation notice within the tech community.
+
+
 
 ---
 
 Article 10: Communication & Exceptions
 
 For exception requests or special licensing permissions:
-
-Contact: esmailll.safwan@gmail.com
-
-Submit a written request specifying the purpose
-
-Await written approval — requests may be denied without explanation
-
+📧 Contact: esmailll.safwan@gmail.com
+📝 Submit a written request specifying the purpose.
+⏳ Await written approval — requests may be denied without explanation.
 
 
 ---
 
-Conclusion
+🏁 Conclusion
+
 This license seeks to balance:
 💡 Knowledge Sharing
 🛡️ Privacy Protection
 🌍 Support for the Tech Community
 📝 Respect for Individual Rights
 
-“Code for learning, privacy for respect.”
+> “Code for learning, privacy for respect.”
+
+
+
+© 2025 Esmail Safwan — All rights reserved.
