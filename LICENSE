@@ -1,110 +1,81 @@
-🧾 Selective Licensing Agreement – Esmail Web
+```markdown
+# 🧾 Selective Licensing Agreement – Esmail Web
 
-Version 1.0 — November 2025
-Project Owner: Esmail
-Website: https://yfqqp.github.io/esmail.web/
-Contact: esmailll.safwan@gmail.com
-
-
----
-
-🩷 Chapter 1: General Provisions
-
-Article 1: Definitions
-
-Project: Refers to the website Esmail Web and all its components.
-
-Source Code: Includes HTML, CSS, JavaScript, and any associated libraries.
-
-Personal Content: Refers to all personal images, texts, CV, and personal experiences.
-
-Private Data: Includes all personal information, contact details, career history, and project data.
-
-
+**Version 1.0 — November 2025**  
+**Project Owner:** Esmail  
+**Website:** https://yfqqp.github.io/esmail.web/  
+**Contact:** esmailll.safwan@gmail.com
 
 ---
 
-Article 2: License Scope
+## 🩷 Chapter 1: General Provisions
 
-This agreement governs the use of the Esmail Web project.
+### Article 1: Definitions
+
+- **Project:** Refers to the website Esmail Web and all its components.
+- **Source Code:** Includes HTML, CSS, JavaScript, and any associated libraries.
+- **Personal Content:** Refers to all personal images, texts, CV, and personal experiences.
+- **Private Data:** Includes all personal information, contact details, career history, and project data.
+
+### Article 2: License Scope
+
+This agreement governs the use of the Esmail Web project.  
 It defines what may be freely shared and what must remain protected — balancing knowledge sharing with personal privacy protection.
 
-
 ---
 
-⚙️ Chapter 2: Technical Licensing Details
+## ⚙️ Chapter 2: Technical Licensing Details
 
-Article 3: Shareable Code
+### Article 3: Shareable Code
 
-3.1 Allowed File Types
+#### 3.1 Allowed File Types
+- HTML (structure only)
+- CSS (design and styling)
+- JavaScript (functions and logic)
+- Configuration and documentation files
 
-HTML (structure only)
+#### 3.2 Conditions of Use
+- **Usage:** Permitted for personal, educational, or commercial purposes.
+- **Modification:** Allowed to modify or improve the source code.
+- **Distribution:** Allowed to distribute original or modified versions.
+- **Attribution:** Must credit the original source in the project’s README file.
 
-CSS (design and styling)
-
-JavaScript (functions and logic)
-
-Configuration and documentation files
-
-
-3.2 Conditions of Use
-
-Usage: Permitted for personal, educational, or commercial purposes.
-
-Modification: Allowed to modify or improve the source code.
-
-Distribution: Allowed to distribute original or modified versions.
-
-Attribution: Must credit the original source in the project’s README file.
-
-
-3.3 Practical Examples
-
+#### 3.3 Practical Examples
+```javascript
 // ✓ Allowed: Using JavaScript functions
 function navigateToSection(sectionId) {
     // This logic can be reused
 }
+```
 
-// ✓ Allowed: Cloning CSS styles
+```css
+/* ✓ Allowed: Cloning CSS styles */
 .header-style {
     color: #333;
     font-size: 1.2rem;
 }
-
-
----
+```
 
 Article 4: Protected Personal Content
 
 4.1 Protected Images
 
-Personal portraits
-
-Family or memorial photos
-
-Screenshots containing personal features
-
+· Personal portraits
+· Family or memorial photos
+· Screenshots containing personal features
 
 4.2 Protected Texts
 
-Curriculum Vitae (CV)
-
-Personal or career experiences
-
-Personal biography
-
-Certificates, recommendations, and project summaries
-
+· Curriculum Vitae (CV)
+· Personal or career experiences
+· Personal biography
+· Certificates, recommendations, and project summaries
 
 4.3 Protected Data
 
-Contact details
-
-Career and academic history
-
-Personal achievements and identifying information
-
-
+· Contact details
+· Career and academic history
+· Personal achievements and identifying information
 
 ---
 
@@ -114,49 +85,31 @@ Article 5: Permitted Uses
 
 For Developers
 
-✓ Studying the website’s structure and UI design
-
-✓ Reusing navigation or animation functions
-
-✓ Cloning styles or UI components
-
-✓ Building similar code with modifications
-
-✓ Using for educational purposes
-
+· ✓ Studying the website’s structure and UI design
+· ✓ Reusing navigation or animation functions
+· ✓ Cloning styles or UI components
+· ✓ Building similar code with modifications
+· ✓ Using for educational purposes
 
 For Companies
 
-✓ Using source code in internal or commercial projects
-
-✓ Modifying or integrating code according to business needs
-
-✗ Forbidden: Using or copying personal content for clients
-
-
-
----
+· ✓ Using source code in internal or commercial projects
+· ✓ Modifying or integrating code according to business needs
+· ✗ Forbidden: Using or copying personal content for clients
 
 Article 6: Prohibited Uses
 
 Images
 
-✗ Using images on other websites
-
-✗ Editing, cropping, or redistributing images
-
-✗ Using images for marketing or social media
-
+· ✗ Using images on other websites
+· ✗ Editing, cropping, or redistributing images
+· ✗ Using images for marketing or social media
 
 Texts
 
-✗ Copying CV or personal biography
-
-✗ Using or quoting personal experiences
-
-✗ Translating personal texts for republication
-
-
+· ✗ Copying CV or personal biography
+· ✗ Using or quoting personal experiences
+· ✗ Translating personal texts for republication
 
 ---
 
@@ -166,6 +119,7 @@ Article 7: Code Identification
 
 Developers must distinguish between allowed and restricted elements in the source code.
 
+```html
 <!-- ✓ Allowed: HTML structure -->
 <div class="container">
     <header class="main-header"></header>
@@ -173,7 +127,7 @@ Developers must distinguish between allowed and restricted elements in the sourc
 
 <!-- ✗ Forbidden: Personal content -->
 <p>5 years experience in programming...</p>
-
+```
 
 ---
 
@@ -183,24 +137,15 @@ Article 9: Violations and Consequences
 
 Minor Violations
 
-Written warning and 7-day notice to remove the infringing content.
-
-Public acknowledgment of correction.
-
-Future access restrictions to Esmail Web resources.
-
+· Written warning and 7-day notice to remove the infringing content.
+· Public acknowledgment of correction.
+· Future access restrictions to Esmail Web resources.
 
 Major Violations
 
-Legal action under intellectual property laws.
-
-Compensation for material and moral damages.
-
-Publication of violation notice within the tech community.
-
-
-
----
+· Legal action under intellectual property laws.
+· Compensation for material and moral damages.
+· Publication of violation notice within the tech community.
 
 Article 10: Communication & Exceptions
 
@@ -209,19 +154,21 @@ For exception requests or special licensing permissions:
 📝 Submit a written request specifying the purpose.
 ⏳ Await written approval — requests may be denied without explanation.
 
-
 ---
 
 🏁 Conclusion
 
 This license seeks to balance:
-💡 Knowledge Sharing
-🛡️ Privacy Protection
-🌍 Support for the Tech Community
-📝 Respect for Individual Rights
 
-> “Code for learning, privacy for respect.”
+· 💡 Knowledge Sharing
+· 🛡️ Privacy Protection
+· 🌍 Support for the Tech Community
+· 📝 Respect for Individual Rights
 
+"Code for learning, privacy for respect."
 
+---
 
 © 2025 Esmail Safwan — All rights reserved.
+
+```
