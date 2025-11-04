@@ -892,3 +892,64 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(initWatermarks, 1000);
     setInterval(addWatermarkToModalImages, 2000);
 });
+let isShareOpen = false;
+
+function toggleShareMenu() {
+    const shareButtons = document.getElementById('shareButtons');
+    const shareToggle = document.getElementById('shareToggle');
+    
+    isShareOpen = !isShareOpen;
+    
+    if (isShareOpen) {
+        shareButtons.classList.add('show');
+        shareToggle.style.transform = 'rotate(45deg)';
+    } else {
+        shareButtons.classList.remove('show');
+        shareToggle.style.transform = 'rotate(0)';
+    }
+}
+
+function shareOnLinkedIn() {
+    const url = encodeURIComponent(window.location.href);
+    const title = encodeURIComponent("Esmail Almekhlafi - Portfolio");
+    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
+}
+
+function shareOnTwitter() {
+    const url = encodeURIComponent(window.location.href);
+    const text = encodeURIComponent("Check out Esmail Almekhlafi's amazing portfolio!");
+    window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
+}
+
+function shareOnWhatsApp() {
+    const url = encodeURIComponent(window.location.href);
+    const text = encodeURIComponent("Check out this amazing portfolio: ");
+    window.open(`https://wa.me/?text=${text}${url}`, '_blank');
+}
+
+function copyLink() {
+    const url = window.location.href;
+    navigator.clipboard.writeText(url).then(() => {
+        const btn = event.target.closest('.share-btn');
+        const originalText = btn.querySelector('span:last-child').textContent;
+        btn.querySelector('span:last-child').textContent = 'Copied!';
+        
+        setTimeout(() => {
+            btn.querySelector('span:last-child').textContent = originalText;
+        }, 2000);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const shareToggle = document.getElementById('shareToggle');
+    if (shareToggle) {
+        shareToggle.addEventListener('click', toggleShareMenu);
+    }
+    
+    document.addEventListener('click', function(event) {
+        const shareContainer = document.getElementById('floatingShare');
+        if (isShareOpen && !shareContainer.contains(event.target)) {
+            toggleShareMenu();
+        }
+    });
+});
