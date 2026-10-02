@@ -768,7 +768,7 @@ function addWatermarkToImage(img) {
         ctx.textBaseline = 'middle';
         
         const text = currentLanguage === 'ar' ? 'إسماعيل المخلافي' : 
-                     currentLanguage === 'ru' ? 'Эсмаил Альмехлафи' : 
+                     currentLanguage === 'ru' ? 'Аль-Михлафи Исмаил' : 
                      'Esmail Almekhlafi';
 
         const cols = Math.ceil(canvas.width / 200);
